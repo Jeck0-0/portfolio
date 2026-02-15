@@ -15,6 +15,13 @@ obj/
 dist/
 publish/
 
+# Node
+node_modules/
+.npm/
+
+# Generated CSS
+**/wwwroot/css/app.min.css
+
 # OS files
 .DS_Store
 Thumbs.db

@@ -18,6 +18,14 @@ jobs:
         with:
           dotnet-version: '9.0.x'
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Publish Project
         run: dotnet publish Portfolio.Client/Portfolio.Client.csproj -c Release -o release
 
