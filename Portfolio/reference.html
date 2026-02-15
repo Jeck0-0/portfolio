@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ba5dc0",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#1d151d",
+                        "card-dark": "#2a1f2b",
+                        "sidebar-dark": "#221e29"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            scrollbar-width: thin;
+            scrollbar-color: #ba5dc0 #1d151d;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1d151d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #ba5dc0;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar (Mobile & Header context) -->
+<main class="flex flex-col lg:flex-row h-screen">
+<!-- Left Column: Fixed Profile Sidebar -->
+<aside class="w-full lg:w-[380px] lg:h-full overflow-y-auto border-r border-white/5 bg-sidebar-dark p-8 flex flex-col items-center shrink-0"><!-- Navigation at top -->
+<div class="w-full space-y-3 mb-auto">
+<h3 class="text-xs font-bold uppercase tracking-widest text-slate-500 text-center">Navigation</h3>
+<nav class="flex flex-row justify-center gap-4">
+<a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary group" href="#">
+<span class="material-symbols-outlined text-xl">folder_open</span>
+<span class="font-medium">Projects</span>
+</a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/5 text-slate-400 hover:text-white transition-all group" href="#">
+<span class="material-symbols-outlined text-xl">person</span>
+<span>About</span>
+</a>
+</nav>
+</div>
+<!-- Personal info vertically centered -->
+<div class="my-auto flex flex-col items-center text-center space-y-6 max-w-xs">
+<div class="w-32 h-32 rounded-2xl bg-gradient-to-br from-primary to-purple-800 p-1">
+<div class="w-full h-full rounded-xl bg-background-dark flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Cyberpunk style profile illustration of a developer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZAKiGdajlecCoHlgzFlY2r4nSs0j84MnRCsJAHppgni1MzpZcfM2PNnT6SY_FqgsdQHtiD-zafdFXMopiaEKBSAPA-KjkOMyEW9g48Yo-nkLPczodnSjv4kiouMZfSD81MpLuoCsv0FFujfPCBjMxVp0bcPeFKFsKahALkcRJX8u5lFaONjm8toVVb7duHT4tbQQyN9famBHLO3ipWkyZexyG1xUr5caQ8eBAhwTrNnECipRtIX4nXugDXks6ZxgdePxr5lF68C9v"/>
+</div>
+</div>
+<div>
+<h1 class="text-4xl font-bold text-white leading-tight">Elara Pixel</h1>
+<p class="text-primary font-medium text-lg">Indie Game Developer &amp; Artist</p>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">
+        Crafting atmospheric 2D worlds with a focus on narrative-driven gameplay and retro-inspired pixel art. Currently experimenting with Godot and procedural generation.
+    </p>
+</div>
+<!-- Spacer at bottom to help with centering -->
+<div class="mt-auto h-8"></div></aside>
+<!-- Right Column: Scrollable Content -->
+<section class="flex-1 h-full overflow-y-auto bg-background-dark/50 p-6 lg:p-12">
+<div class="max-w-4xl mx-auto space-y-16">
+<!-- Personal Projects Section -->
+<div class="space-y-8" id="personal">
+<div class="flex items-center gap-4">
+<h2 class="text-2xl font-bold tracking-tight text-white">Personal Projects</h2>
+<div class="h-px flex-1 bg-white/5"></div>
+<span class="text-xs font-mono text-primary/60">01</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Project 1 -->
+<div class="group bg-card-dark rounded-xl border border-white/5 overflow-hidden hover:border-primary/50 transition-all">
+<div class="aspect-video bg-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/30 via-transparent to-transparent opacity-20 group-hover:scale-110 transition-transform"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-white/10 group-hover:text-primary transition-colors">joystick</span>
+</div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-2 py-1 rounded bg-black/60 backdrop-blur-sm text-[10px] font-bold text-white uppercase">Indie</span>
+<span class="px-2 py-1 rounded bg-primary/80 backdrop-blur-sm text-[10px] font-bold text-white uppercase">In Dev</span>
+</div>
+</div>
+<div class="p-6 space-y-3">
+<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Neon Drifter: 2049</h3>
+<p class="text-sm text-slate-400 leading-relaxed">A high-octane procedural racer inspired by 80s synthwave. Features custom CRT post-processing effects and a dynamic music system.</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="text-[10px] font-bold text-slate-500 uppercase">Unity</span>
+<span class="text-[10px] font-bold text-slate-500 uppercase">C#</span>
+<span class="text-[10px] font-bold text-slate-500 uppercase">Aseprite</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group bg-card-dark rounded-xl border border-white/5 overflow-hidden hover:border-primary/50 transition-all">
+<div class="aspect-video bg-slate-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-full h-full bg-[repeating-linear-gradient(45deg,_transparent,_transparent_10px,_rgba(255,255,255,0.02)_10px,_rgba(255,255,255,0.02)_20px)] group-hover:scale-110 transition-transform"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-white/10 group-hover:text-primary transition-colors">auto_awesome</span>
+</div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-2 py-1 rounded bg-black/60 backdrop-blur-sm text-[10px] font-bold text-white uppercase">Narrative</span>
+</div>
+</div>
+<div class="p-6 space-y-3">
+<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">The Last Pixel</h3>
+<p class="text-sm text-slate-400 leading-relaxed">A meditative puzzle platformer where you explore a dying digital world. Focuses on environmental storytelling and minimalist art.</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="text-[10px] font-bold text-slate-500 uppercase">Godot</span>
+<span class="text-[10px] font-bold text-slate-500 uppercase">GDScript</span>
+<span class="text-[10px] font-bold text-slate-500 uppercase">GLSL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- School Projects Section -->
+<div class="space-y-8" id="school">
+<div class="flex items-center gap-4">
+<h2 class="text-2xl font-bold tracking-tight text-white">School Projects</h2>
+<div class="h-px flex-1 bg-white/5"></div>
+<span class="text-xs font-mono text-primary/60">02</span>
+</div>
+<div class="space-y-4">
+<div class="group flex flex-col md:flex-row gap-6 p-4 rounded-xl bg-card-dark/50 hover:bg-card-dark border border-transparent hover:border-white/5 transition-all">
+<div class="w-full md:w-48 h-32 shrink-0 rounded-lg bg-slate-800 flex items-center justify-center overflow-hidden border border-white/5">
+<div class="w-full h-full bg-gradient-to-r from-blue-500/10 to-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-white/20">school</span>
+</div>
+</div>
+<div class="flex-1 py-2">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">A* Pathfinding Visualization</h3>
+<span class="text-xs font-mono text-slate-500">2023</span>
+</div>
+<p class="text-sm text-slate-400 mt-2">Final project for Algorithm Design. A real-time interactive visualization of pathfinding algorithms in grid-based environments.</p>
+<div class="flex gap-4 mt-4">
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">C++</span>
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">SFML</span>
+</div>
+</div>
+</div>
+<div class="group flex flex-col md:flex-row gap-6 p-4 rounded-xl bg-card-dark/50 hover:bg-card-dark border border-transparent hover:border-white/5 transition-all">
+<div class="w-full md:w-48 h-32 shrink-0 rounded-lg bg-slate-800 flex items-center justify-center overflow-hidden border border-white/5">
+<div class="w-full h-full bg-gradient-to-r from-green-500/10 to-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-white/20">database</span>
+</div>
+</div>
+<div class="flex-1 py-2">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">Inventory System Framework</h3>
+<span class="text-xs font-mono text-slate-500">2022</span>
+</div>
+<p class="text-sm text-slate-400 mt-2">Modular RPG inventory system with drag-and-drop, crafting, and persistent storage using SQLite.</p>
+<div class="flex gap-4 mt-4">
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Unity</span>
+<span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">SQLite</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Experiments Section -->
+<div class="space-y-8 pb-20" id="experiments">
+<div class="flex items-center gap-4">
+<h2 class="text-2xl font-bold tracking-tight text-white">Experiments</h2>
+<div class="h-px flex-1 bg-white/5"></div>
+<span class="text-xs font-mono text-primary/60">03</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="aspect-square rounded-xl bg-card-dark border border-white/5 p-4 flex flex-col justify-between hover:border-primary transition-all cursor-pointer group">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">flare</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-white mb-1">Shader Jam #12</h4>
+<p class="text-[11px] text-slate-500">Vertex animation test for foliage effects.</p>
+</div>
+</div>
+<div class="aspect-square rounded-xl bg-card-dark border border-white/5 p-4 flex flex-col justify-between hover:border-primary transition-all cursor-pointer group">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">data_object</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-white mb-1">Dungeon Gen</h4>
+<p class="text-[11px] text-slate-500">Cellular automata exploration.</p>
+</div>
+</div>
+<div class="aspect-square rounded-xl bg-card-dark border border-white/5 p-4 flex flex-col justify-between hover:border-primary transition-all cursor-pointer group">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">brush</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-white mb-1">Pixel Palettes</h4>
+<p class="text-[11px] text-slate-500">Automatic color grading tools.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Project Modal Overlay (Visual only, no functionality) -->
+<div class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4 lg:p-12">
+<div class="absolute inset-0 bg-background-dark/90 backdrop-blur-sm"></div>
+<div class="relative w-full max-w-5xl bg-sidebar-dark rounded-2xl border border-white/10 overflow-hidden shadow-2xl flex flex-col md:flex-row">
+<div class="flex-1 bg-black">
+<div class="w-full h-full min-h-[300px] bg-gradient-to-br from-slate-900 to-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-white/20">play_circle</span>
+</div>
+</div>
+<div class="w-full md:w-[400px] p-8 space-y-6">
+<div class="flex justify-between items-start">
+<h2 class="text-2xl font-bold text-white">Neon Drifter</h2>
+<button class="text-slate-500 hover:text-white transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-4">
+<p class="text-sm text-slate-400 leading-relaxed">Detailed breakdown of the development process including technical challenges overcome during the pixel shader implementation.</p>
+<div class="space-y-2">
+<h4 class="text-xs font-bold text-slate-500 uppercase">Tags</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded bg-white/5 text-[10px] text-white">Post-Processing</span>
+<span class="px-2 py-1 rounded bg-white/5 text-[10px] text-white">Optimization</span>
+<span class="px-2 py-1 rounded bg-white/5 text-[10px] text-white">Mobile</span>
+</div>
+</div>
+</div>
+<button class="w-full py-3 rounded-xl bg-primary text-white font-bold hover:brightness-110 transition-all">Launch Prototype</button>
+</div>
+</div>
+</div>
+</body></html>

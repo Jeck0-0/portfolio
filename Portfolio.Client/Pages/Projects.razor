@@ -1,0 +1,84 @@
+@page "/projects"
+@using Portfolio.Client.Components
+
+<!-- Personal Projects Section -->
+<div class="space-y-8" id="personal">
+    <div class="flex items-center gap-4">
+        <h2 class="text-2xl font-bold tracking-tight text-white">Personal Projects</h2>
+        <div class="h-px flex-1 bg-white/5"></div>
+        <span class="text-xs font-mono text-primary/60">01</span>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <ProjectCard 
+            Title="BitDefense" 
+            Description="A classic tower defense game with a modern progression system. Collect EXP dropped by enemies and unlock upgrades from the towers' tech trees."
+            ImagePath="projects/bitdefense.png"
+            ItchUrl="https://jeck0-0.itch.io/tower-defense"
+            TechStack="@([ "UNITY", "C#", "ASEPRITE" ])"
+            StatusTag="Solo Project"
+            SecondaryTag="In Development"
+        />
+
+        <ProjectCard 
+            Title="Hex Sweeper" 
+            Description="A MineSweeper game, but using hexagons instead of squares. I developed this to test a new plugin I bought for rendering simple shapes, and learned DOTween at the same time. Most of the game was developed in 5 days."
+            ImagePath="projects/hexsweeper.png"
+            ItchUrl="https://jeck0-0.itch.io/hex-sweeper"
+            TechStack="@([ "UNITY", "C#", "SHAPES", "DOTWEEN" ])"
+            StatusTag="Solo Project"
+        />
+
+        <ProjectCard 
+            Title="ReShot"
+            Description="Made in 4 days for the GMTK 2025 Game Jam with the theme 'Loop'."
+            ImagePath="projects/reshot.png"
+            ItchUrl="https://jeck0-0.itch.io/gmtk-2025"
+            TechStack="@([ "UNITY", "C#", "ASEPRITE" ])"
+            StatusTag="Group Project" 
+        />
+    </div>
+</div>
+
+<!-- School Projects Section -->
+<div class="space-y-8 mt-16" id="school">
+    <div class="flex items-center gap-4">
+        <h2 class="text-2xl font-bold tracking-tight text-white">School Projects</h2>
+        <div class="h-px flex-1 bg-white/5"></div>
+        <span class="text-xs font-mono text-primary/60">02</span>
+    </div>
+    
+    <div class="space-y-4">
+        
+        <ProjectCard 
+            Title="GOAP" 
+            Description="I created a tool in Unity to modify NPC and Enemy behaviour using a state machine, similar to GOAP, using Unity's graph editor."
+            ImagePath="projects/goap.png"
+            ItchUrl=""
+            TechStack="@([ "Unity", "C#", "Graph Editor" ])"
+            IsHorizontal="true"
+            Year="2025"
+        />
+
+        <ProjectCard 
+            Title="In The Ground" 
+            Description="Group project. I created a networking system using Steamworks (Facepunch). It allows joining and creating lobbies, and relays packets through Steam's servers for higher security."
+            ImagePath="projects/intheground.jpg"
+            ItchUrl=""
+            TechStack="@([ "Unity", "C#", "Facepunch", "Networking" ])"
+            IsHorizontal="true"
+            Year="2025"
+        />
+
+        <ProjectCard 
+            Title="Grid A* Pathfinding" 
+            Description="I implemented A* and created a nice visualization for the movement and attack patterns."
+            ImagePath="projects/pathfinding.png"
+            ItchUrl="https://jeck0-0.itch.io/gad213"
+            TechStack="@([ "Unity", "C#", "Aseprite" ])"
+            IsHorizontal="true"
+            Year="2025"
+        />
+
+    </div>
+</div>

@@ -1,0 +1,26 @@
+@inherits LayoutComponentBase
+
+<div class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display w-full max-w-[1440px] mx-auto shadow-2xl lg:h-screen lg:overflow-hidden">
+    <main class="flex flex-col lg:flex-row lg:h-screen relative">
+        <!-- Sticky Navigation: Shared across mobile and desktop -->
+        <div class="w-full z-30 sticky top-0 bg-sidebar-dark/95 backdrop-blur p-8 lg:absolute lg:top-0 lg:left-0 lg:w-[380px] lg:bg-transparent lg:backdrop-blur-none">
+            <Navigation />
+        </div>
+
+        <!-- Sidebar (Profile) -->
+        <aside class="w-full border-r border-white/5 bg-sidebar-dark shrink-0 flex flex-col lg:w-[380px] lg:h-full lg:overflow-hidden">
+            <!-- Profile: Centered -->
+            <!-- pt-0 on mobile because Navigation is above it. pt-32 on desktop to clear absolute Navigation. -->
+            <div class="w-full flex items-center justify-center p-8 pt-0 lg:h-full lg:overflow-y-auto lg:pt-32">
+                <ProfileCard />
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="flex-1 bg-background-dark/50 p-6 lg:p-12 lg:h-full lg:overflow-y-auto">
+            <div class="max-w-4xl mx-auto space-y-16">
+                @Body
+            </div>
+        </section>
+    </main>
+</div>
