@@ -4,8 +4,8 @@
   "description": "Portfolio website",
   "main": "index.js",
   "scripts": {
-    "build:css": "npx tailwindcss -i ./Portfolio.Client/Styles/tailwind.css -o ./Portfolio.Client/wwwroot/css/app.min.css --minify",
-    "watch:css": "npx tailwindcss -i ./Portfolio.Client/Styles/tailwind.css -o ./Portfolio.Client/wwwroot/css/app.min.css --watch"
+    "build:css": "node node_modules/tailwindcss/lib/cli.js -i ./Portfolio.Client/Styles/tailwind.css -o ./Portfolio.Client/wwwroot/css/app.min.css --minify",
+    "watch:css": "node node_modules/tailwindcss/lib/cli.js -i ./Portfolio.Client/Styles/tailwind.css -o ./Portfolio.Client/wwwroot/css/app.min.css --watch"
   },
   "devDependencies": {
     "@tailwindcss/container-queries": "^0.1.1",
