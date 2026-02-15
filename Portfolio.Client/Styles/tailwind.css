@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    h1:focus, h2:focus, h3:focus, h4:focus, h5:focus, h6:focus {
+        outline: none;
+    }
+
     body {
         font-family: 'Space Grotesk', sans-serif;
         background-image: url('../background.png');
