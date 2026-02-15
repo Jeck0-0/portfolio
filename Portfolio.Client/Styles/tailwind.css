@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Space Grotesk', sans-serif;
+        background-image: url('../background.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+}
+
+/* Scrollbar Styling */
+@layer utilities {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(186, 93, 192, 0.3) transparent;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px; /* for horizontal scrollbars if any */
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(186, 93, 192, 0.3);
+        border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(186, 93, 192, 0.3) !important;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background: #ba5dc0 !important;
+    }
+
+    ::-webkit-scrollbar-button {
+        display: none;
+    }
+}
